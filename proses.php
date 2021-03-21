@@ -71,12 +71,11 @@
     </div>
 </form>
 <?php
-$proses= $_POST['proses'];
 $customer= $_POST['name'];
 $produk= $_POST['produk'];
 $jumlah= $_POST['jml'];
 
-echo 'Proses : '.$proses;
+
 echo '<br/>Customer : '.$customer;
 echo '<br/>Produk : '.$produk;
 echo '<br/>Jumlah Pembelian : '.$jumlah;
@@ -88,11 +87,15 @@ function rupiah($angka){
  
 }
 if ($produk == "tv"){
-  $total = 4200000 * $jumlah;
+  $total = 2200000 * $jumlah;
   echo '<br/>Total Belanja :'.rupiah($total);
 }
 elseif ($produk == "kulkas"){
-  $total = 3100000 *$jumlah;
+  $total = 2500000 *$jumlah;
+  echo '<br/> Total Belanja :'.rupiah($total);
+}
+elseif ($produk == "kipas"){
+  $total = 1800000 *$jumlah;
   echo '<br/> Total Belanja :'.rupiah($total);
 }
 else{
@@ -100,20 +103,6 @@ else{
   echo '<br/>Total belanja :'.rupiah($total);
 }
 ?>
-
-
-</div>
-<div class="col-sm-4">
-    <div class="container2">
-    <ul class="list-group">
-        <li class="list-group-item active" aria-current="true">Daftar Harga</li>
-        <li class="list-group-item">TV : Rp.4.200.000</li>
-        <li class="list-group-item">Kulkas : Rp. 3.100.000</li>
-        <li class="list-group-item">Mesin Cuci : Rp. 3.800.000</li>
-        <li class="list-group-item">Kipas : Rp. 1.800.000</li>
-        <li class="list-group-item active" aria-current="true">Harga Dapat Berubah Setiap Saat</li>
-    </ul>
-    </div>
 </div>
 </div>
 </div>
